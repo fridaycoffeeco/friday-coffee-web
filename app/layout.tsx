@@ -1,17 +1,18 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Poppins, Oswald } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 
-const inter = Inter({
-  variable: "--font-inter-var",
+const poppins = Poppins({
+  variable: "--font-poppins-var",
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
   display: "swap",
 });
 
-const playfair = Playfair_Display({
-  variable: "--font-playfair-var",
+const oswald = Oswald({
+  variable: "--font-oswald-var",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   display: "swap",
@@ -62,7 +63,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${playfair.variable} h-full antialiased`}
+      className={`${poppins.variable} ${oswald.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <Nav />

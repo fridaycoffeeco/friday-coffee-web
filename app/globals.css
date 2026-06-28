@@ -1,20 +1,21 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand: #1a4fd8;
-  --color-brand-dark: #1340b8;
-  --color-brand-light: #eef2ff;
-  --color-cream: #f8f6f1;
-  --color-ink: #111827;
-  --color-muted: #6b7280;
+  --color-navy: #1e3a73;
+  --color-navy-dark: #16284f;
+  --color-navy-light: #2a4a8a;
+  --color-cobalt: #2547a0;
+  --color-cream: #f7f6f2;
+  --color-ink: #1a1a1a;
+  --color-muted: #5b6472;
 
-  --font-sans: var(--font-inter-var);
-  --font-display: var(--font-playfair-var);
+  --font-sans: var(--font-poppins-var);
+  --font-display: var(--font-oswald-var);
 }
 
 :root {
   --background: #ffffff;
-  --foreground: #111827;
+  --foreground: #1a1a1a;
 }
 
 body {
@@ -23,6 +24,15 @@ body {
   font-family: var(--font-sans), system-ui, sans-serif;
 }
 
-h1, h2, h3 {
-  font-family: var(--font-display), Georgia, serif;
+h1, h2, h3, h4 {
+  font-family: var(--font-display), "Arial Narrow", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  line-height: 1.05;
+}
+
+/* Brand display heading helper */
+.font-display {
+  font-family: var(--font-display), "Arial Narrow", sans-serif;
 }

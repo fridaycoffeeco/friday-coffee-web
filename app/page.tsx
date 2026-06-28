@@ -1,11 +1,13 @@
 import Hero from "@/components/Hero";
-import TrustBar from "@/components/TrustBar";
-import ServicesGrid from "@/components/ServicesGrid";
-import HowItWorks from "@/components/HowItWorks";
+import PerfectForEvent from "@/components/PerfectForEvent";
+import CartExperience from "@/components/CartExperience";
+import WhatsIncluded from "@/components/WhatsIncluded";
 import Gallery from "@/components/Gallery";
-import Testimonials from "@/components/Testimonials";
-import LocationsGrid from "@/components/LocationsGrid";
-import FaqTeaser from "@/components/FaqTeaser";
+import TrustedBy from "@/components/TrustedBy";
+import Reviews from "@/components/Reviews";
+import Heart from "@/components/Heart";
+import QuoteSection from "@/components/QuoteSection";
+import DallasBlurb from "@/components/DallasBlurb";
 import SchemaMarkup, { localBusinessSchema } from "@/components/SchemaMarkup";
 
 export default function HomePage() {
@@ -13,13 +15,15 @@ export default function HomePage() {
     <>
       <SchemaMarkup schema={localBusinessSchema} />
       <Hero />
-      <TrustBar />
-      <ServicesGrid />
-      <HowItWorks />
+      <PerfectForEvent />
+      <CartExperience />
+      <WhatsIncluded />
       <Gallery />
-      <Testimonials />
-      <LocationsGrid />
-      <FaqTeaser />
+      <TrustedBy />
+      <Reviews />
+      <Heart />
+      <QuoteSection />
+      <DallasBlurb />
     </>
   );
 }

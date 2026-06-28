@@ -1,32 +1,25 @@
 export type Testimonial = {
   name: string;
-  role: string;
+  when: string;
   quote: string;
 };
 
 export const testimonials: Testimonial[] = [
   {
-    name: "Sarah M.",
-    role: "Bride, Plano Wedding",
-    quote:
-      "Friday Coffee Co. was the highlight of our wedding reception. Guests are still talking about the latte art and how smooth the whole experience was. Aya and Mustafa are an absolute dream team.",
+    name: "Liliana Rizo",
+    when: "2 months ago",
+    quote: "Super delicious flavor! Freshly made. Made my day.",
   },
   {
-    name: "James T.",
-    role: "Events Manager, JP Morgan Chase",
+    name: "Shine",
+    when: "2 months ago",
     quote:
-      "We've used Friday Coffee Co. for multiple corporate events and they never disappoint. Professional, on time, and the coffee quality is genuinely exceptional. Our team loves when they show up.",
+      "Cutest little coffee served at the boll+branch pop up. Aesthetically pleasing, great coffee, and great people running it.",
   },
   {
-    name: "Rachel K.",
-    role: "Brand Activation Lead, Champs Sports",
+    name: "Umar Rehman",
+    when: "2 months ago",
     quote:
-      "The branded cart and custom cups were exactly what our activation needed. Friday Coffee Co. understood our vision immediately and delivered something that wowed every attendee.",
-  },
-  {
-    name: "David & Priya L.",
-    role: "Couple, Frisco Wedding",
-    quote:
-      "From the first inquiry to the last cup, Friday Coffee Co. was seamless. They customized our drink menu, brought branded cups, and the barista even created a latte art design that matched our wedding theme.",
+      "This is my first time trying their coffee. I absolutely loved the roast quality and flavour. Must try. Definitely coming back.",
   },
 ];
