@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { faqs } from "@/lib/faqs";
 import SchemaMarkup from "@/components/SchemaMarkup";
+import { Eyebrow } from "@/components/Sparkle";
 
 export const metadata: Metadata = {
   title: "FAQs",
@@ -15,10 +16,7 @@ const faqSchema = {
   mainEntity: faqs.map((faq) => ({
     "@type": "Question",
     name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
+    acceptedAnswer: { "@type": "Answer", text: faq.answer },
   })),
 };
 
@@ -26,17 +24,16 @@ export default function FaqsPage() {
   return (
     <>
       <SchemaMarkup schema={faqSchema} />
-      <section className="py-20 lg:py-28 bg-[#f8f6f1] min-h-[70vh]">
-        <div className="max-w-3xl mx-auto px-6 lg:px-8">
+      <section className="py-20 lg:py-28 bg-cream min-h-[70vh]">
+        <div className="max-w-3xl mx-auto px-5 lg:px-8">
           <div className="text-center mb-14">
-            <span className="inline-block text-[#1a4fd8] text-sm font-semibold tracking-widest uppercase mb-3">
-              FAQs
-            </span>
-            <h1 className="text-4xl md:text-5xl font-display font-semibold text-[#111827] mb-4">
+            <Eyebrow>FAQs</Eyebrow>
+            <h1 className="mt-4 text-4xl lg:text-5xl text-navy mb-4">
               Frequently Asked Questions
             </h1>
-            <p className="text-[#6b7280] text-lg max-w-lg mx-auto">
-              Everything you need to know about booking Friday Coffee Co. for your event.
+            <p className="text-muted text-lg max-w-lg mx-auto">
+              Everything you need to know about booking Friday Coffee Co. for
+              your event.
             </p>
           </div>
 
@@ -46,10 +43,10 @@ export default function FaqsPage() {
                 key={faq.question}
                 className="bg-white rounded-2xl border border-gray-100 px-6 py-5 group"
               >
-                <summary className="flex items-center justify-between cursor-pointer list-none font-semibold text-[#111827] text-sm">
+                <summary className="flex items-center justify-between cursor-pointer list-none font-semibold text-ink">
                   {faq.question}
                   <svg
-                    className="w-5 h-5 text-[#1a4fd8] shrink-0 ml-4 transition-transform group-open:rotate-45"
+                    className="w-5 h-5 text-cobalt shrink-0 ml-4 transition-transform group-open:rotate-45"
                     fill="none"
                     stroke="currentColor"
                     strokeWidth={2}
@@ -58,18 +55,16 @@ export default function FaqsPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
                   </svg>
                 </summary>
-                <p className="mt-3 text-sm text-[#6b7280] leading-relaxed">
-                  {faq.answer}
-                </p>
+                <p className="mt-3 text-sm text-muted leading-relaxed">{faq.answer}</p>
               </details>
             ))}
           </div>
 
           <div className="mt-12 text-center">
-            <p className="text-[#6b7280] mb-4">Still have questions?</p>
+            <p className="text-muted mb-4">Still have questions?</p>
             <Link
               href="/contact"
-              className="inline-flex items-center px-6 py-3 rounded-full bg-[#1a4fd8] text-white text-sm font-semibold hover:bg-[#1340b8] transition-colors"
+              className="inline-flex items-center justify-center px-8 py-4 rounded-lg bg-navy text-white font-display uppercase tracking-wide text-sm font-semibold hover:bg-navy-dark transition-colors"
             >
               Contact Us
             </Link>
