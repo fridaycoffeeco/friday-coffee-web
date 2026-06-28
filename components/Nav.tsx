@@ -18,21 +18,21 @@ export default function Nav() {
 
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-gray-100">
-      <nav className="max-w-7xl mx-auto px-5 lg:px-8 flex items-center justify-between h-20">
+      <nav className="max-w-7xl mx-auto px-5 lg:px-8 flex items-center justify-between h-20 lg:h-28">
         {/* Logo */}
         <Link href="/" className="flex items-center shrink-0">
           <Image
             src="/images/logo.png"
             alt="Friday Coffee Co."
-            width={130}
-            height={64}
-            className="h-14 w-auto"
+            width={220}
+            height={108}
+            className="h-14 lg:h-20 w-auto"
             priority
           />
         </Link>
 
         {/* Desktop nav */}
-        <div className="hidden lg:flex items-center gap-7 font-display uppercase text-sm tracking-wide font-medium text-navy">
+        <div className="hidden lg:flex items-center gap-8 font-display uppercase text-base tracking-wide font-medium text-navy">
           <Link href="/" className="hover:text-cobalt transition-colors">
             Home
           </Link>
@@ -97,7 +97,7 @@ export default function Nav() {
         {/* Desktop CTA */}
         <Link
           href="/quote"
-          className="hidden lg:inline-flex items-center px-6 py-3 rounded-lg bg-navy text-white font-display uppercase text-sm tracking-wide font-semibold hover:bg-navy-dark transition-colors"
+          className="hidden lg:inline-flex items-center px-9 py-4 rounded-xl bg-navy text-white font-display uppercase text-base tracking-wide font-semibold hover:bg-navy-dark transition-colors"
         >
           Get a Quote
         </Link>
